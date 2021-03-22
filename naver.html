@@ -3,32 +3,214 @@
     <head>
         <meta charset="utf-8">
         <title>NAVER</title>
-        <link rel="stylesheet" type="text/css" href="./style/style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <header>
-            <div class="head-containor">
-                <div class="logo-naver">
-                    <a href="naver.html">
-                        <img src="Naver_Logotype.svg" width="200px">
-                    </a>
+        <div class="wrap">
+            <header class="header">
+                <div class="header__top-wrap">
+                    <div class="header__logo">
+                        <div class="logo">
+                            <a href="naver.html">
+                                <img src="./src/img/Naver_Logotype.svg" width="200px">
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="header__search">
+                        <form class="search">
+                            <input type="text" id="head-search" class="search__input">
+                            <button type="button" onclick="location.href='naver.html'" class="search__button">
+                                <img src="./src/img/search.png" width="46px" height="46px">
+                            </button>
+                        </form>
+                    </div>
+    
+                    <div class="side-links">
+                        <a class="side-links__link" href="https://naver.com">네이버를 시작페이지로</a>
+                        <i class="sa-bar"></i>
+                        <a class="side-links__link" href="https://jr.naver.com">쥬니어네이버&nbsp;</a>
+                        <a class="side-links__link" href="https://happybean.naver.com">해피빈</a>
+                    </div>
                 </div>
-                <div class="search-bar">
-                    <input type="text" id="search" name="search">
-                    <button type="button"><img src="search.png"></button>
+                <div class="horizontal-line"></div>
+                <div class="header__nav-wrap">
+                    <div class="header__nav">
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="" class="nav__link--user">메일</a></li>
+                                <li class="nav__item"><a href="" class="nav__link--user">카페</a></li>
+                                <li class="nav__item"><a href="" class="nav__link--user">블로그</a></li>
+                                <li class="nav__item"><a href="" class="nav__link--user">지식iN</a></li>
+                                <li class="nav__item"><a href="" class="nav__link--user">쇼핑</a></li>
+                                <li class="nav__item"><a href="" class="nav__link--user">Pay</a></li>
+                                <li class="nav__item"><a href="" class="nav__link--user">TV</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">사전</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">뉴스</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">증권</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">부동산</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">지도</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">영화</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">VIBE</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">책</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">웹툰</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__nav--more">더보기</div>
+                    <div class="header__nav--weather">날씨</div>
                 </div>
-                <div class="links">
-                    link
-                </div>
-            </div>
-        </header>
+            </header>
 
-        <main>
-            main
-        </main>
+            <main class="main">
+                main
+            </main>
+            
+            <footer class="footer">
+                <div class="footer__wrap">
+                    <div class="footer__banner-wrap">
+                        <div class="banner">
+                            <div class="banner__img">
+                                <img src="./src/img/banner1.jpg" width="160px" height="86px">
+                            </div>
+                            <div class="banner__content">
+                                <div class="banner__content--subtitle">
+                                    온스테이지 2021
+                                </div>
+                                <strong class="banner__content--title">이용자 설문조사</strong>
+                                <div class="banner__content--desc">
+                                    참여하면 다양한 선물까지!<br>
+                                    마감 : 3월 26일(금)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner">
+                            <div class="banner__img">
+                                <img src="./src/img/banner2.png" width="160px" height="86px">
+                            </div>
+                            <div class="banner__content">
+                                <div class="banner__content--subtitle">
+                                    네이버 커넥트재단
+                                </div>
+                                <strong class="banner__content--title">백엔드개발자 되고 싶다면</strong>
+                                <div class="banner__content--desc">
+                                    실제 서비스로 실습하는<br>
+                                    실무와 가까운 강좌
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner">
+                            <div class="banner__img">
+                                <img src="./src/img/banner3.png" width="160px" height="86px">
+                            </div>
+                            <div class="banner__content">
+                                <div class="banner__content--subtitle">
+                                    D2SF 스타트업
+                                </div>
+                                <strong class="banner__content--title">데이터바우처 합격 전략</strong>
+                                <div class="banner__content--desc">
+                                    전담팀 1:1 컨설팅으로<br>
+                                    최대 7천만원 지원받기
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <footer>
-            footer
-        </footer>
+                    <div class="footer__notice-wrap">
+                        <div class="footer__notice-box">
+                            공지사항
+                        </div>
+                        <div class="footer__link-all">
+                            <a href="#">서비스 전체보기 ></a>
+                        </div>
+                    </div>
+
+                    <div class="footer__partners-wrap">
+                        <div class="footer__partner">
+                            <div class="title-link-set">
+                                <h3 class="title-link-set__title">Creators</h3>
+                                <div class="link-set">
+                                    <a href="">크리에이터</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">스몰비즈니스</a>
+                                </div>
+                            </div>
+                            <div class="title-link-set">
+                                <h3 class="title-link-set__title">Partners</h3>
+                                <div class="link-set">
+                                    <a href="">비즈니스 · 광고</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">스토어 개설</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">지역업체 등록</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">엑스퍼트 등록</a>
+                                </div>
+                            </div>
+                            <div class="title-link-set">
+                                <h3 class="title-link-set__title">Developers</h3>
+                                <div class="link-set">
+                                    <a href="">네이버 개발자 센터</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">오픈 API</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">오픈소스</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">네이버 D2</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">네이버 D2SF</a>
+                                    <i class="sa-bar"></i>
+                                    <a href="">네이버 랩스</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__projects-wrap">
+                            <div class="project">
+                                <div class="project__desc">
+                                    <strong class="project__desc--title">웨일 브라우저</strong><br>
+                                    <a href="http://whale.naver.com" class = "project__desc--link" >다운로드</a>
+                                </div>
+                                <div class="project__img">
+                                    <img src="./src/img/whale_browser.png" width="48" height="48">
+                                </div>
+                            </div>
+                            <div class="project">
+                                <div class="project__desc">
+                                    <strong class="project__desc--title">프로젝트 꽃</strong><br>
+                                    <a href="http://whale.naver.com" class="project__desc--link" >바로가기</a>
+                                </div>
+                                <div class="project__img">
+                                    <img src="./src/img/project_flower.png" width="47" height="50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__info-wrap">
+                        <div class="link-set">
+                            <a href="">회사소개</a>
+                            <i class="sa-bar"></i>
+                            <a href="">인재채용</a>
+                            <i class="sa-bar"></i>
+                            <a href="">제휴제안</a>
+                            <i class="sa-bar"></i>
+                            <a href="">이용약관</a>
+                            <i class="sa-bar"></i>
+                            <a href=""><strong>개인정보처리방침</strong></a>
+                            <i class="sa-bar"></i>
+                            <a href="">청소년보호정책</a>
+                            <i class="sa-bar"></i>
+                            <a href="">네이버 정책</a>
+                            <i class="sa-bar"></i>
+                            <a href="">고객센터</a>
+                        </div>
+                        <div class="footer__info--addr">
+                            <a href="https://navercorp.com" target="_blank">ⓒ NAVER Corp.</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
