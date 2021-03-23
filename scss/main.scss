@@ -64,6 +64,7 @@ a {
         height: 52px;
         @include flex-center-align;
         @include base-size;
+        flex-direction: column;
     }
 
     &__logo{
@@ -74,20 +75,11 @@ a {
         width: 586px;
         background-color: $naver-green;
     }
-
-    &__nav {
-        &--more{
-            @include links-font($font-apple, 13px);
-            padding-left: 20px;
-        }
-        &--weather{
-            flex-grow: 1;
-            text-align: center;
-        }
-    }
 }
 
 .nav {
+    display: flex;
+    flex-direction: row;
     font-family: $font-apple;
     font-weight: bold;
 
@@ -97,17 +89,27 @@ a {
     &__item{
         float: left;
         margin-right: 14px;
-
+        padding-top: 15px;
+        
         a:hover{
             text-decoration: none;
         }
     }
     &__link{
-        @extend .nav;
+        // @extend .nav;
+
+        &[class=--custom]{
+            // @extend .nav;
+            color: $naver-green;
+        }
     }
-    &__link--user{
-        @extend .nav;
-        color: $naver-green;
+    &__more{
+        @include links-font($font-apple, 13px);
+        padding-left: 20px;
+    }
+    &__weather{
+        flex-grow: 1;
+        text-align: center;
     }
 }
 
@@ -150,6 +152,24 @@ a {
 
 .main{
     @include section-border;
+
+    &__wrap{
+        display: grid;
+        margin: 0px auto;
+        @include base-size;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 40px;
+    }
+}
+.cards{
+    list-style-type: none;
+    display: grid;
+    margin: 0px auto;
+    align-items: center;
+    width: 750px;
+    height: 260px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .footer{
@@ -220,7 +240,7 @@ a {
         @include section-border();
     }
 
-    &__info--addr{
+    &__addr{
         font-size: 12px;
         padding-left: 15px;
 
@@ -242,23 +262,23 @@ a {
 
     &__content{
         padding-left: 16px;
+    }
 
-        &--title{
-            margin-top: 6px;
-            font-size: 13px;
-            color: #424242;
-        }
+    &__title{
+        margin-top: 6px;
+        font-size: 13px;
+        color: #424242;
+    }
 
-        &--subtitle{
-            font-size: 12px;
-            color: #58C464;
-        }
+    &__subtitle{
+        font-size: 12px;
+        color: #58C464;
+    }
 
-        &--desc{
-            margin-top: 8px;
-            font-size: 12px;
-            color: #424242;
-        }
+    &__desc{
+        margin-top: 8px;
+        font-size: 12px;
+        color: #424242;
     }
 }
 
