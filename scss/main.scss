@@ -16,7 +16,7 @@ $font-apple: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     padding: $padding;
 }
 
-@mixin section-border {
+@mixin section-border() {
     border-top: 1px solid $border-color;    
 }
 
@@ -25,7 +25,7 @@ $font-apple: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     font-size: $size;
 }
 
-@mixin flex-center-align {
+@mixin flex-center-align() {
     display: flex;
     margin: auto;
     align-items: center;
@@ -56,15 +56,14 @@ a {
 
     &__top-wrap{
         height: 160px;
-        @include flex-center-align;
+        @include flex-center-align();
         @include base-size;
     }
 
     &__nav-wrap{
         height: 52px;
-        @include flex-center-align;
+        margin: 0px auto;
         @include base-size;
-        flex-direction: column;
     }
 
     &__logo{
@@ -78,11 +77,11 @@ a {
 }
 
 .nav {
-    display: flex;
-    flex-direction: row;
     font-family: $font-apple;
     font-weight: bold;
-
+    display: flex;
+    flex-direction: row;
+    
     &__list{
         list-style-type: none;
     }
@@ -98,18 +97,22 @@ a {
     &__link{
         // @extend .nav;
 
-        &[class=--custom]{
+        &[class$=--custom]{
             // @extend .nav;
             color: $naver-green;
         }
     }
     &__more{
         @include links-font($font-apple, 13px);
+        align-self: center;
         padding-left: 20px;
+        padding-top: 15px;
     }
     &__weather{
-        flex-grow: 1;
+        align-self: center;
         text-align: center;
+        padding-top: 15px;
+        flex-grow: 1;
     }
 }
 
@@ -151,7 +154,7 @@ a {
 }
 
 .main{
-    @include section-border;
+    @include section-border();
 
     &__wrap{
         display: grid;
@@ -161,6 +164,10 @@ a {
         column-gap: 40px;
     }
 }
+
+$colors: #A3E4D7, #A2D9CE, #A9DFBF, #ABEBC6, #76D7C4, #73C6B6, #7DCEA0,
+#82E0AA, #48C9B0, #45B39D, #52BE80, #58D68D, #1ABC9C, #16A085, #27AE60, #2ECC71 ;
+
 .cards{
     list-style-type: none;
     display: grid;
@@ -170,10 +177,26 @@ a {
     height: 260px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+
+    &__item{
+        @for $i from 1 through length($colors) {
+            $color: nth($colors, $i);
+            &:nth-child(#{$i}){
+                background-color: $color;
+            }
+        }
+    }
+}
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .footer{
-    @include section-border;
+    @include section-border();
     background-color: #FAFBFC;
 
     &__wrap{
@@ -198,7 +221,7 @@ a {
         justify-content: space-between;
 
         padding: 16px 0px 15px;
-        @include section-border;
+        @include section-border();
     }
     &__notice-box, &__link-all{
         @include links-font;
